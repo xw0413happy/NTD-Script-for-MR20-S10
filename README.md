@@ -46,8 +46,8 @@ from datetime import date, timedelta
 
 | File Name | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Daily Ridership by Route`      | `.xlsx` | **input** | Be careful with "service type" column, should match up with "Weekday", "Saturday", "Sunday", and "Atypical" |
-| `Service changes within the RY/FY`      | `.xlsx` | **input** RY: reporting year / FY: fiscal year|
+| `Daily Ridership by Route` | `.xlsx` | **input** Be careful with "service type" column, should match up with "Weekday", "Saturday", "Sunday", and "Atypical" |
+| `Service changes within the RY/FY` | `.xlsx` | **input** RY: reporting year / FY: fiscal year|
 | `Scheduled VRM & VRH`      | `.xlsx` | **input**  vehicle revenue miles & vehicle revenue hours|
 | `Scheduled DHM & DHH`      | `.xlsx` | **input**  deadhead miles & deadhead hours|
 | `Atypical days`      | `.xlsx` | **Deviation Tables (input)** |
