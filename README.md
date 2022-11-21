@@ -1,5 +1,5 @@
 
-# Probing Check GUI Desktop App
+# Calculating actual vehicle revenue miles & hours
 
 The app is basically analyzing *two separate files* to check over each other and generate a text document probe check report. 
 The **purpose** of developing this app is to target which fixed route buses are not probed and which dates are their last time probing.
@@ -10,8 +10,7 @@ The **purpose** of developing this app is to target which fixed route buses are 
 
 This project is used by the following file formats:
 
-- **probing summary csv file**, which is downloaded from *GenFare*
-- **daily operation log folder**, which is provided by *LeeTran Operdation Department*
+- **seperate 10 .xlsx files**, which is extracted from *LeeTran NTD Workbook*
 
 
 ## Deployment
@@ -19,16 +18,11 @@ This project is used by the following file formats:
 To deploy this project run, the following modules are needed to be imported as belows.
 
 ```bash
-import pandas as pd
 import os
-import math
+import pandas as pd
+import numpy as np
 import datetime
-from datetime import datetime
-from contextlib import redirect_stdout
-import tkinter as tk
-import tkinter.font as font
-from tkinter import filedialog
-from PIL import Image, ImageTk
+from datetime import date, timedelta
 ```
 
 To convert .py into .exe, copy the following command onto your Anaconda Prompt
@@ -60,7 +54,14 @@ All uploaded .xlsm files are used for testing.
 
 | File Name | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `test for opt logs hurr ian`      | `.py` | **Test file** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Service changes within the RY/FY`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
+| `Daily Ridership by Route`      | `.xlsx` | **input** |
 
 
 
