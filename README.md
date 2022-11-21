@@ -32,9 +32,9 @@ from datetime import date, timedelta
 #### Update key notes:
 
 
-- (1) only pick up 3-digit Bus number
-- (2) remove text in stand-by list 
-- (3) remove '/' and ' / " from stand_by_list
+- (1) Modify VOMS, service changes and atypical days
+- (2) Create No.14 Service Chnages VOMS
+- (3) Automatically generate S-10 and verified
 
 
 | File Name | Type     | Description                |
