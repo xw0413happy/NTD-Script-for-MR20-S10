@@ -1,8 +1,8 @@
 
 # Calculating actual vehicle revenue miles & hours
 
-The app is basically analyzing *two separate files* to check over each other and generate a text document probe check report. 
-The **purpose** of developing this app is to target which fixed route buses are not probed and which dates are their last time probing.
+This code is basically analyzing *National Transit Database (NTD)* to calculate actual vehicle revenue miles & hours and actual total vehicle miles & hours. 
+The **purpose** of developing this code is to generate two files which are needed to report to Federal Transit Administration, i.e., MR-20 and S-10.
 
 
 
@@ -25,11 +25,6 @@ import datetime
 from datetime import date, timedelta
 ```
 
-To convert .py into .exe, copy the following command onto your Anaconda Prompt
-```bash
-auto-py-to-exe
-```
-
 
 
 ## Repository Structure
@@ -44,25 +39,25 @@ auto-py-to-exe
 
 | File Name | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `ProbeCheck_V4` | `.py` | **Required**. It is the main file, updated to 4th version |
+| `NTD_MB_11_18_2022` | `.py` | **Required**.  |
 
 #### Other supplementary files description
 
-```http
-All uploaded .xlsm files are used for testing.
-```
 
 | File Name | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Service changes within the RY/FY`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-| `Daily Ridership by Route`      | `.xlsx` | **input** |
-
+| `Service changes within the RY/FY`      | `.xlsx` | **input** RY: reporting year / FY: fiscal year|
+| `Scheduled VRM & VRH`      | `.xlsx` | **input**  vehicle revenue miles & vehicle revenue hours|
+| `Scheduled DHM & DHH`      | `.xlsx` | **input**  deadhead miles & deadhead hours|
+| `Atypical days`      | `.xlsx` | **Deviation Tables (input)** |
+| `Added Runs`      | `.xlsx` | **Deviation Tables (input)** |
+| `Lost Runs`      | `.xlsx` | **Deviation Tables (input)** |
+| `VOMS`      | `.xlsx` | **input** Vehicles Operated at Maximum Service (the number of VOMS changes dependent on service change|
+| `Actual VRM & VRH`      | `.xlsx` | **output** actual vehicle revenue miles & actual vehicle revenue hours|
+| `Actual TVM & TVR`      | `.xlsx` | **output** actual total vehicle miles & actual total vehicle hours|
+| `MR-20`      | `.xlsx` | **output** Automated Monthly Form (needed to report to Federal Transit Administration)|
+| `S-10`      | `.xlsx` | **output** Automated Annually Form (needed to report to Federal Transit Administration)|
 
 
 
@@ -81,7 +76,6 @@ Python, R, SQL, ArcGIS, Nlogit, Stata, Power BI, Javascript, HTML, CSS, Synchro,
 
 ## Acknowledgements
 
- - [LeeTran](https://www.leegov.com/leetran/how-to-ride/maps-schedules)
- - [Learn more about how to loop over images by using Python Tkinter](https://www.youtube.com/watch?v=NoTM8JciWaQ&t=565s)
- - [Genfare](https://www.genfare.com/products/)
+ - [FTA](https://www.transit.dot.gov/)
+ - [Learn more about NTD](https://www.transit.dot.gov/ntd)
 
